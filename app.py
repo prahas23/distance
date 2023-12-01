@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return render_template('template.html')
+
 @app.route('/metrics', methods=['POST'])
 def metrics():
     try:

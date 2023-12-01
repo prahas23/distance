@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Data Display</title>
+</head>
+<body>
+    <h1>Dynamic Data Display</h1>
+    <div id="data-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Function to fetch and update data
+        function fetchData() {
+            $.get('/metrics', function(metrics_data) {
+                $('#data-container').text(metrics_data.message);
+            });
+        }
+
+        // Initial data fetch on page load
+        $(document).ready(function() {
+            fetchData();
+        });
+
+        // Optionally, set up a timer to periodically fetch data
+        setInterval(fetchData, 5000); // Update every 5 seconds (adjust as needed)
+    </script>
+</body>
+</html>
