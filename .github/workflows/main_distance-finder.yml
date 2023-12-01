@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'distance-finder'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5D34AD5308264BBCB5B7FFDD255D6BB7 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4BD9981E20C94FC49D5603D7920A339E }}
