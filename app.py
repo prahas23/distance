@@ -11,7 +11,7 @@ def index():
 @app.route('/get_data', methods=['GET'])
 def get_data():
     global metrics_data
-    return jsonify(metrics_data)
+    return jsonify('distance_cm': metrics_data)
 
 @app.route('/metrics', methods=['POST'])
 def metrics():
