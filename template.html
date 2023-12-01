@@ -12,7 +12,7 @@
     <script>
         // Function to fetch and update data
         function fetchData() {
-            $.get('/metrics', function(metrics_data) {
+            $.get('/get_data', function(metrics_data) {
                 $('#data-container').text(metrics_data.message);
             });
         }
